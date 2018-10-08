@@ -8,7 +8,7 @@ const Details = props => {
     return props.match.params.id === el.cca3;
   });
 
-  const borders = []
+  const borders = [];
 
   matchedCountry[0].borders.forEach(border => {
       props.countries.forEach(country => {
@@ -31,7 +31,8 @@ const Details = props => {
             <td>Area</td>
             <td>{`${matchedCountry[0].area} km2`}</td>
           </tr>
-          {borders.length !== 0 && <tr>
+          {borders.length !== 0 && 
+          <tr>
              <td>Borders</td>
             <Borders borders={borders} />
           </tr>}

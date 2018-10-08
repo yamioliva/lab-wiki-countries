@@ -26,26 +26,14 @@ class App extends Component {
         <div>
           <Navbar />
           <div className="content">
-            <Search
-              handleSearchChange={this._handleSearchChange}
-              search={this.state.search}
-            />
+            <Search handleSearchChange={this._handleSearchChange} search={this.state.search}/>
             <div className="row">
               <div className="col-5">
-                <List
-                  countries={this.state.countries}
-                  search={this.state.search}
-                />
+                <List countries={this.state.countries} search={this.state.search}/>
               </div>
               <div className="col-7">
                 <Switch>
-                  <Route
-                    exact
-                    path="/:id"
-                    render={() => {
-                      return <Details countries={this.state.countries} />;
-                    }}
-                  />
+                  <Route exact path="/:id" render={() => {return <Details countries={this.state.countries} />;}}/>
                 </Switch>
               </div>
             </div>
